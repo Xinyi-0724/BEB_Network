@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Motivation</title>
+    <style>
+        /* Add your existing styles here */
+        /* ... */
+
+    .faq {
+        margin-top: 40px;
+        background-color: #e3e3e3;
+        padding: 20px;
+    }
+
+    .faq h2 {
+        margin-top: 0;
+    }
+
+    .faq ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .faq ul li {
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+        .flex-container {
+            display: flex;
+        }
+
+
+        .main-content {
+            flex-grow: 1;
+            /* If there's padding on the sidebar, ensure the same is applied here */
+            padding: 20px; /* This padding should match the sidebar padding for vertical alignment */
+            background-color: #fff; /* Or any color or background you wish to apply */
+        }
+
+                /* Style for the sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Style for the active menu item */
+        .sidebar .active {
+            color: blue; /* This will be the color of the selected item */
+            font-weight: bold;
+        }
+
+        /* Style for sidebar links */
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html" >Research Motivation</a></li>
+                <li><a href="network.html">Electric Bus Networks</a></li>
+                <li><a href="Q_A.html" class="active">Q & A</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="introduction-container">
+                <div class="faq">
+                    <h2>Q&A:</h2>
+                    <ul>
+                        <li>What are GTFS files?</li>
+                        <li>Where can I find GTFS files?</li>
+                        <li>Why don't we assign each charging station a power node?</li>
+                        <li>What should be done if no network is generated?</li>
+                    </ul>
+                    <p>For more questions, please feel free to send an email to [Email Address].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add your scripts here -->
+</body>
+</html>
+                        

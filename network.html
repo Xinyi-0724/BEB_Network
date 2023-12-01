@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Motivation</title>
+    <style>
+        /* Add your existing styles here */
+        /* ... */
+
+        .introduction-container {
+            max-width: 800px; /* Set a max-width for the content for better readability */
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 0; /* Remove top margin */
+        }
+
+        .introduction-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .introduction-container img {
+            width: 60%; /* Adjust the size as needed */
+            display: block;
+            margin: 20px auto; /* Centers the image */
+        }
+
+        .introduction-container em {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading {
+            color: #5c6bc0;
+            font-size: 24px; /* Adjust the font-size as needed */
+            margin-top: 40px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #5c6bc0; /* Adds a colored underline */
+        }
+
+        .section-content {
+            margin-top: 20px;
+        }
+
+        .introduction-container ul {
+            list-style-type: none; /* Removes the default bullet points */
+            padding-left: 0;
+        }
+
+        .introduction-container li {
+            margin-bottom: 10px;
+        }
+
+        .conclusion {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+
+        .main-content {
+            flex-grow: 1;
+            /* If there's padding on the sidebar, ensure the same is applied here */
+            padding: 20px; /* This padding should match the sidebar padding for vertical alignment */
+            background-color: #fff; /* Or any color or background you wish to apply */
+        }
+
+                /* Style for the sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Style for the active menu item */
+        .sidebar .active {
+            color: blue; /* This will be the color of the selected item */
+            font-weight: bold;
+        }
+
+        /* Style for sidebar links */
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #eaeaea;
+        }
+
+        /* body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        } */
+
+        .upload-container {
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .upload-container:hover {
+            border-color: #777;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        /* Base style for buttons */
+        .button {
+            padding: 10px 20px; /* Some padding inside the button */
+            margin: 20px 10px; /* Some margin outside the button */
+            border: none; /* Remove the default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            display: inline-block; /* Allows the button to be centered with text-align */
+            font-size: 16px; /* Increase font size */
+        }
+
+        /* Specific style for the blue button */
+        .blue-button {
+            background-color: #007bff; /* Bootstrap primary blue */
+            color: white; /* White text color */
+        }
+
+        /* Specific style for the green button */
+        .green-button {
+            background-color: #28a745; /* Bootstrap success green */
+            color: white; /* White text color */
+        }
+
+        /* Specific style for the orange button */
+        .orange-button {
+            background-color: #ffc107; /* Bootstrap warning orange */
+            color: white; /* White text color */
+        }
+
+        /* Specific style for the grey button */
+        .grey-button {
+            background-color: #6c757d; /* Bootstrap secondary grey */
+            color: white; /* White text color */
+        }
+
+        /* Hover effect for the blue button */
+        .blue-button:hover {
+            background-color: #0056b3; /* A darker shade of blue */
+        }
+
+        /* Hover effect for the green button */
+        .green-button:hover {
+            background-color: #218838; /* A darker shade of green */
+        }
+
+        /* Hover effect for the orange button */
+        .orange-button:hover {
+            background-color: #e0a800; /* A darker shade of orange */
+        }
+
+        /* Hover effect for the grey button */
+        .grey-button:hover {
+            background-color: #5a6268; /* A darker shade of grey */
+            padding: 5px 10px; /* Smaller padding for a smaller button */
+            font-size: 10px; /* Smaller font size for a smaller button */
+        }
+
+        .button-container {
+            display: flex; /* Use flexbox to layout children */
+            justify-content: center; /* Center children horizontally */
+            align-items: center; /* Center children vertically */
+            gap: 70px; /* Add space between buttons */
+        }
+        
+        /* Style for the section steps */
+        .section-break {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, #f0f0f0, #8c8c8c, #f0f0f0);
+            margin: 20px 0;
+        }
+        .center-container {
+            text-align: center; /* This centers the inline contents */
+            margin: 0 auto; /* This centers the block itself if it has a width */
+            padding: 20px; /* Add some padding around the content */
+        }
+
+        /* Style for iframe */
+        .iframe-container {
+            width: 100%;
+            height: 500px; /* You can adjust this to fit your design */
+            border: 2px dotted #000; /* Dotted border */
+            margin-top: 20px; /* Add some space above the iframe */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Research Motivation</a></li>
+                <li><a href="network.html" class="active">Electric Bus Networks</a></li>
+                <li><a href="Q_A.html">Q & A</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="introduction-container">
+                <h2>A Coupled Transportation and Power Network Visualization in the Browser</h2>
+
+                <p>Welcome to our interactive webpage, designed to revolutionize electric bus planning! </p>
+                <p>Here, you'll find a powerful tool that generates coupled power and transportation network models.</p>     
+                <p>This innovative platform is an invaluable resource for scientists and city planners. It facilitates interdisciplinary decision-making by providing insights into the impacts of electric bus operations on both the power grid and transportation systems.</p>     
+                <p>Dive in and explore how our tool can assist in creating more efficient, sustainable urban environments!</p>     
+
+                <p align="center">
+                    <img src="images/coupled_overlap.png" alt="Electric Buses and Eco-Friendly Charging">
+                    <em>Functional interconnection of nodes in the coupled power and transportation network.</em>
+                </p>
+
+                <h3 class="section-heading">📖 Existing Case Study</h3>
+                <p class="section-content">Explore the intricacies of coupled power and transportation networks in three exemplary cities - King County, WA, Austin, TX, and Salt Lake City, UT. 🌟 Get ready to zoom in and explore the big, busy world of power and transportation networks. You'll see every tiny detail - it's like being a detective for cities!</p>
+                <!-- Container for the buttons -->
+                <div class="button-container">
+                    <!-- Wrap buttons with anchor tags to make them clickable links -->
+                    <a href="images/coupled_map_sample_WA.html" target="map-frame">
+                      <button type="button" class="button blue-button">King County, WA.</button>
+                    </a>
+                    <a href="images/coupled_map_TX_sample.html" target="map-frame">
+                      <button type="button" class="button orange-button">Austin, TX.</button>
+                    </a>
+                    <a href="images/coupled_map_UT_sample.html" target="map-frame">
+                      <button type="button" class="button green-button">Salt Lake City, UT.</button>
+                    </a>
+                  </div>
+                <!-- iframe to display the content -->
+                <iframe name="map-frame" class="iframe-container"></iframe> 
+
+
+                <h3 class="section-heading"> ✍️ Create Your Own Networks</h3>
+                <p class="section-content">You have the unique opportunity to create a custom network for your own city's electric bus planning. 🚌 It's simple and loads of fun! Just follow these easy steps:
+
+                    <ol class="section-steps">
+                        <li>Download a General Transit Feed Specification (GTFS) data file for your city's buses (you can usually find this on Google).</li>
+                        <li>Drag and drop the zip file into the box below.</li>
+                        <li>Click on "Generate" and watch the magic happen!</li>
+                    </ol>
+                    
+                    That's all there is to it. Start now and see how you can transform your city's transportation network!</p>
+
+                    <hr class="section-break">
+                    <p>📂 Drag and drop your file into the box or click to select a file.</p>
+
+                    <div class="upload-container">
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <input type="file" name="file" id="file" accept=".zip" required>
+                        <button type="submit" class="button grey-button">Upload</button>
+
+                        
+                    </form>
+                    </div>
+                    <p>After you upload your file, click on the button below to generate your network 🌟.</p>
+                    <div class="center-container">
+                        <button type="submit" class="button green-button">Generate your network</button>
+                      </div>
+
+                     
+                        
+            </div>
+        </div>
+    </div>
+    <!-- Add your scripts here -->
+</body>
+</html>
+                        
