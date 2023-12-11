@@ -9,7 +9,7 @@
         /* ... */
 
         .introduction-container {
-            max-width: 800px; /* Set a max-width for the content for better readability */
+            width: 80%; /* Adjust the width as needed */
             margin: auto;
             padding: 20px;
             background-color: #fff;
@@ -32,6 +32,15 @@
             display: block;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        .introduction-container .checklist {
+            list-style-type: disc; /* This will create bullet points */
+            margin-top: 10px;
+        }
+
+        .introduction-container .checklist li {
+            margin-left: 20px; /* This indents the checklist items */
         }
 
         .section-heading {
@@ -73,53 +82,98 @@
             background-color: #fff; /* Or any color or background you wish to apply */
         }
 
-                /* Style for the sidebar */
-                .sidebar {
-            width: 250px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 100vh;
-            position: sticky;
-            top: 0;
+
+        /* Style for the top bar */
+        .top-bar {
+            background-color: #4b2e83; /* Replace with the exact color of the purple used by your university */
+            color: white;
+            padding: 10px 20px; /* Adjust padding as needed */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        /* Style for the active menu item */
-        .sidebar .active {
-            color: blue; /* This will be the color of the selected item */
-            font-weight: bold;
+        .logo1 {
+            /* Adjust the size of the logo as needed */
+            height: 50px;
         }
 
-        /* Style for sidebar links */
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
+        .logo2 {
+            /* Adjust the size of the logo as needed */
+            height: 20px;
+        }
+
+        .nav-menu {
+            background-color: #c7c5c5; /* Adjust to match the exact color of your menu background */
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        .nav-menu img {
+            height: 40px; /* Adjust based on your second logo's size */
+            margin-right: 20px; /* Add some space between the logo and the menu items */
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
             margin: 0;
+            padding: 0;
+            margin-left: auto; /* Push the menu items to the right */
         }
 
-        .sidebar ul li a {
+        .nav-menu li {
+            display: flex; /* Make the li a flex container too, if needed */
+            align-items: center; /* Align the content of li in the center vertically */
+            padding: 0 15px;
+        }
+
+        /* Add slashes after each li except the last one */
+        .nav-menu li:not(:last-child)::after {
+            content: "/";
+            color: white; /* Assuming you want white slashes */
+            font-size: 1.8em; 
+            font-weight: bold;
+            margin-left: 10px; /* This adds space after the slash */
+        }
+
+        .nav-menu a {
+            color: #4b2e83; /* Adjust text color as needed */
+            font-size: 1.2em; 
             text-decoration: none;
-            color: #333;
-            padding: 10px;
-            display: block;
+            padding: 10px 15px;
+        }
+        .nav-menu .active {
+            color: #4b2e83; /* This will be the color of the selected item */
+            font-weight: bold;
+            text-decoration: underline; /* existing style for hover */
+            border-bottom: 3px solid white; /* This adds a bottom border to the active item */
         }
 
-        .sidebar ul li a:hover,
-        .sidebar ul li a.active {
-            background-color: #eaeaea;
+        .nav-menu a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <!-- Replace 'logo1.png' with the path to your actual first logo -->
+        <img src="images/UW_logo.png" alt="University Logo" class="logo2">
+        <!-- Other content for the top bar goes here -->
+    </div>
+    <div class="nav-menu">
+        <!-- Replace 'path_to_logo_image.png' with the path to your actual logo image -->
+        <img src="images/CEI_logo.png" alt="Clean Energy Institute Logo" class="logo1">
+        <ul>
+            <!-- Add actual links to your navigation items -->
+            <li><a href="index.html" class="active">Research Motivation</a></li>
+            <li><a href="network.html">Electric Bus Networks</a></li>
+            <li><a href="Q_A.html">Q & A</a></li>
+        </ul>
+    </div>
     <div class="flex-container">
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="index.html" class="active">Research Motivation</a></li>
-                <li><a href="network.html">Electric Bus Networks</a></li>
-                <li><a href="Q_A.html">Q & A</a></li>
-            </ul>
-        </div>
         <div class="main-content">
             <div class="introduction-container">
                 <h2>Electric Buses: Navigating Towards Cleaner, Advanced Transportation and Power Systems!</h2>
@@ -144,10 +198,10 @@
                 <p class="section-content">
                     Now, here's where our adventure gets even more interesting. To plan for electric buses, we need to think about two big things: transportation (how the buses will move around the city) and power systems (how we'll keep the buses charged and ready to go). It's like a puzzle where both pieces need to fit perfectly!
                 </p>
-                <ul>
+                <ul class="checklist">
                     <li><strong>Transportation System Angle:</strong> We'll explore routes, bus stops, and how to make sure buses are where people need them when they need them. It's like designing a super-efficient bus dance across the city!</p>
                     <li><strong>Power System Angle:</strong> Here, we'll dive into how to keep our electric buses charged. Do we need big batteries? Where should charging stations be? How do we make sure there's always enough power? It's a bit like planning a giant, city-wide game of tag, where charging stations are the 'safe zones'.</p>
-
+                </ul>
                 <h3 class="section-heading">🔧 Your Exploration Tool: GTFS_PowerTransNet</h3>
                 <p class="section-content">To help you understand and explore this cool world of electric bus planning, there's a nifty tool called <a href="https://github.com/Xinyi-0724/GTFS_TransPowerNet" target="_blank"><strong>GTFS_PowerTransNet</strong></a>. It's a Python function (a piece of computer code) that helps create a combined map of power and transportation networks. It's like having a digital sandbox where you can play and see how transportation and power systems work together for electric buses.</p>
 

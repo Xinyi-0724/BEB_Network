@@ -8,27 +8,56 @@
         /* Add your existing styles here */
         /* ... */
 
-    .faq {
-        margin-top: 40px;
-        background-color: #e3e3e3;
-        padding: 20px;
-    }
+        .faq {
+            margin-top: 40px;
+            background-color: #e3e3e3;
+            padding: 20px;
+            font-size: 14px; /* Adjust base font size as needed */
+        }
 
-    .faq h2 {
-        margin-top: 0;
-    }
+        .faq h2 {
+            margin-top: 0;
+            font-size: 24px; /* Larger font size for headings */
+            color: #4b2e83; /* Dark blue color for the heading */
+            font-weight: bold; /* Make the heading bold */
+        }
 
-    .faq ul {
-        list-style-type: none;
-        padding: 0;
-    }
+        .faq p {
+            margin-top: 1em;
+            font-size: 18px; /* Slightly larger font size for content */
+            color: #4b2e83; /* Darker text color for the content */
+        }
+        .faq ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    .faq ul li {
-        background-color: #fff;
-        margin-bottom: 10px;
-        padding: 10px;
-        border-radius: 4px;
-    }
+        .faq ul li.question {
+            background-color: #fff; /* White background for the question */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold; /* Make the question bold */
+            color: #4b2e83; /* Dark blue color for the question text */
+        }
+
+        .faq ul li.answer {
+            /* Style for the answer if you need a different background or text formatting */
+            margin-bottom: 10px;
+            padding: 10px 10px 10px 30px; /* Indent answers for clarity */
+            background-color: #e3e3e3; /* Keep the answer within the same background as the container */
+            color: #5e5e5f;
+        }
+
+        /* Styles for the bullet points */
+        .faq .checklist {
+            list-style-type: disc; /* This will create bullet points */
+            margin-top: 10px;
+        }
+
+        .faq .checklist li {
+            margin-left: 20px; /* This indents the checklist items */
+        }
 
         .flex-container {
             display: flex;
@@ -42,65 +71,123 @@
             background-color: #fff; /* Or any color or background you wish to apply */
         }
 
-                /* Style for the sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 100vh;
-            position: sticky;
-            top: 0;
+        /* Style for the top bar */
+        .top-bar {
+            background-color: #4b2e83; /* Replace with the exact color of the purple used by your university */
+            color: white;
+            padding: 10px 20px; /* Adjust padding as needed */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        /* Style for the active menu item */
-        .sidebar .active {
-            color: blue; /* This will be the color of the selected item */
-            font-weight: bold;
+        .logo1 {
+            /* Adjust the size of the logo as needed */
+            height: 50px;
         }
 
-        /* Style for sidebar links */
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
+        .logo2 {
+            /* Adjust the size of the logo as needed */
+            height: 20px;
+        }
+
+        .nav-menu {
+            background-color: #c7c5c5; /* Adjust to match the exact color of your menu background */
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        .nav-menu img {
+            height: 40px; /* Adjust based on your second logo's size */
+            margin-right: 20px; /* Add some space between the logo and the menu items */
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
             margin: 0;
+            padding: 0;
+            margin-left: auto; /* Push the menu items to the right */
         }
 
-        .sidebar ul li a {
+        .nav-menu li {
+            display: flex; /* Make the li a flex container too, if needed */
+            align-items: center; /* Align the content of li in the center vertically */
+            padding: 0 15px;
+        }
+
+        /* Add slashes after each li except the last one */
+        .nav-menu li:not(:last-child)::after {
+            content: "/";
+            color: white; /* Assuming you want white slashes */
+            font-size: 1.8em; 
+            font-weight: bold;
+            margin-left: 10px; /* This adds space after the slash */
+        }
+
+        .nav-menu a {
+            color: #4b2e83; /* Adjust text color as needed */
+            font-size: 1.2em; 
             text-decoration: none;
-            color: #333;
-            padding: 10px;
-            display: block;
+            padding: 10px 15px;
+        }
+        .nav-menu .active {
+            color: #4b2e83; /* This will be the color of the selected item */
+            font-weight: bold;
+            text-decoration: underline; /* existing style for hover */
+            border-bottom: 3px solid white; /* This adds a bottom border to the active item */
         }
 
-        .sidebar ul li a:hover,
-        .sidebar ul li a.active {
-            background-color: #eaeaea;
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .email {
+            font-weight: bold;
+            color: #010002; /* Example color; change as needed */
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <!-- Replace 'logo1.png' with the path to your actual first logo -->
+        <img src="images/UW_logo.png" alt="University Logo" class="logo2">
+        <!-- Other content for the top bar goes here -->
+    </div>
+    <div class="nav-menu">
+        <!-- Replace 'path_to_logo_image.png' with the path to your actual logo image -->
+        <img src="images/CEI_logo.png" alt="Clean Energy Institute Logo" class="logo1">
+        <ul>
+            <!-- Add actual links to your navigation items -->
+            <li><a href="index.html" >Research Motivation</a></li>
+            <li><a href="network.html">Electric Bus Networks</a></li>
+            <li><a href="Q_A.html" class="active">Q & A</a></li>
+        </ul>
+    </div>
     <div class="flex-container">
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="index.html" >Research Motivation</a></li>
-                <li><a href="network.html">Electric Bus Networks</a></li>
-                <li><a href="Q_A.html" class="active">Q & A</a></li>
-            </ul>
-        </div>
         <div class="main-content">
-            <div class="introduction-container">
-                <div class="faq">
-                    <h2>Q&A:</h2>
-                    <ul>
-                        <li>What are GTFS files?</li>
-                        <li>Where can I find GTFS files?</li>
-                        <li>Why don't we assign each charging station a power node?</li>
-                        <li>What should be done if no network is generated?</li>
-                    </ul>
-                    <p>For more questions, please feel free to send an email to [Email Address].</p>
-                </div>
+            <div class="faq">
+                <h2>Q&A:</h2>
+                <ul>
+                    <li class="question">What are GTFS files?</li>
+                    <li class="answer">The General Transit Feed Specification (GTFS) is an Open Standard used to distribute relevant information about transit systems to riders. It allows public transit agencies to publish their transit data in a format that can be consumed by a wide variety of software applications. Today, the GTFS data format is used by thousands of public transport providers. For more information, please visit the <a href="https://gtfs.org/" target="_blank"><strong>link</strong></a>.</li>
+                    <li class="question">Where can I find GTFS files?</li>
+                    <li class="answer">You can find GTFS files from the <a href="https://transitfeeds.com/" target="_blank"><strong>TransitFeeds</strong></a> website by entering your city's name in the search bar.</li>
+                    <li class="question">Why don't we assign each charging station a power node?</li>
+                    <li class="answer">In reality, the distance between two neighboring bus stops is often considerably shorter than the distance between two nodes in the power grid. Therefore, it's necessary to refine our approach to selecting power grid nodes from the existing transportation nodes. Additionally, adjacent charging stations can be efficiently allocated to their nearest power node for energy support. This ensures a more practical and effective distribution of power resources.</li>
+                    <li class="question">What should be done if no network is generated?</li>
+                    <li class="answer">If no network is generated, please check the following:
+                        <ul class="checklist">
+                            <li>Make sure the GTFS file is in the correct format.</li>
+                            <li>Make sure the GTFS file contains "routes.txt", "trips.txt", "shapes.txt", "stops.txt", and "stop_times.txt".</li>
+                            <li>Ensure that the "stop_times.txt" file in your GTFS file has the "shape_dist_traveled" columns.</li>
+                            <li>Review your input parameters - 'dist_threshold', 'common_stop_threshold', and 'threshold_power_node' - to make sure they're suitable for the current bus routes.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>For more questions, please feel free to send an email to <span class="email">xyzhao24 [at] uw (dot) edu</span>.</p>
             </div>
         </div>
     </div>

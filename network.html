@@ -9,7 +9,7 @@
         /* ... */
 
         .introduction-container {
-            max-width: 800px; /* Set a max-width for the content for better readability */
+            width: 80%; /* Adjust the width as needed */
             margin: auto;
             padding: 20px;
             background-color: #fff;
@@ -65,6 +65,43 @@
             display: flex;
         }
 
+        .map-container {
+            position: relative; /* Keep this to position the pushpins relative to the map container */
+            width: 100%; /* Set to 100% to make the map responsive */
+            margin: auto; /* Center the container */
+        }
+
+        .map-container img {
+            width: 100%; /* Set to 100% to make the map image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .map-marker {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translate(-50%, -50%);
+        }
+
+        .map-marker .emoji {
+            font-size: 25px;
+        }
+
+        .map-marker .city-btn {
+            margin-top: 5px;
+            background-color: #e75151;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: larger; /* Increase font size */
+            color: white; /* Set font color to white */
+        }
+
+        .map-marker .city-btn:hover {
+            background-color: #e0e0e0;
+        }
 
         .main-content {
             flex-grow: 1;
@@ -73,47 +110,78 @@
             background-color: #fff; /* Or any color or background you wish to apply */
         }
 
-                /* Style for the sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 100vh;
-            position: sticky;
-            top: 0;
+        /* Style for the top bar */
+        .top-bar {
+            background-color: #4b2e83; /* Replace with the exact color of the purple used by your university */
+            color: white;
+            padding: 10px 20px; /* Adjust padding as needed */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        /* Style for the active menu item */
-        .sidebar .active {
-            color: blue; /* This will be the color of the selected item */
-            font-weight: bold;
+        .logo1 {
+            /* Adjust the size of the logo as needed */
+            height: 50px;
         }
 
-        /* Style for sidebar links */
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
+        .logo2 {
+            /* Adjust the size of the logo as needed */
+            height: 20px;
+        }
+
+        .nav-menu {
+            background-color: #c7c5c5; /* Adjust to match the exact color of your menu background */
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        .nav-menu img {
+            height: 40px; /* Adjust based on your second logo's size */
+            margin-right: 20px; /* Add some space between the logo and the menu items */
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
             margin: 0;
+            padding: 0;
+            margin-left: auto; /* Push the menu items to the right */
         }
 
-        .sidebar ul li a {
+        .nav-menu li {
+            display: flex; /* Make the li a flex container too, if needed */
+            align-items: center; /* Align the content of li in the center vertically */
+            padding: 0 15px;
+        }
+
+        /* Add slashes after each li except the last one */
+        .nav-menu li:not(:last-child)::after {
+            content: "/";
+            color: white; /* Assuming you want white slashes */
+            font-size: 1.8em; 
+            font-weight: bold;
+            margin-left: 10px; /* This adds space after the slash */
+        }
+
+        .nav-menu a {
+            color: #4b2e83; /* Adjust text color as needed */
+            font-size: 1.2em; 
             text-decoration: none;
-            color: #333;
-            padding: 10px;
-            display: block;
+            padding: 10px 15px;
+        }
+        .nav-menu .active {
+            color: #4b2e83; /* This will be the color of the selected item */
+            font-weight: bold;
+            text-decoration: underline; /* existing style for hover */
+            border-bottom: 3px solid white; /* This adds a bottom border to the active item */
         }
 
-        .sidebar ul li a:hover,
-        .sidebar ul li a.active {
-            background-color: #eaeaea;
+        .nav-menu a:hover {
+            text-decoration: underline;
         }
-
-        /* body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        } */
 
         .upload-container {
             border: 2px dashed #ccc;
@@ -131,70 +199,6 @@
             margin: 10px 0;
         }
 
-        /* Base style for buttons */
-        .button {
-            padding: 10px 20px; /* Some padding inside the button */
-            margin: 20px 10px; /* Some margin outside the button */
-            border: none; /* Remove the default border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            display: inline-block; /* Allows the button to be centered with text-align */
-            font-size: 16px; /* Increase font size */
-        }
-
-        /* Specific style for the blue button */
-        .blue-button {
-            background-color: #007bff; /* Bootstrap primary blue */
-            color: white; /* White text color */
-        }
-
-        /* Specific style for the green button */
-        .green-button {
-            background-color: #28a745; /* Bootstrap success green */
-            color: white; /* White text color */
-        }
-
-        /* Specific style for the orange button */
-        .orange-button {
-            background-color: #ffc107; /* Bootstrap warning orange */
-            color: white; /* White text color */
-        }
-
-        /* Specific style for the grey button */
-        .grey-button {
-            background-color: #6c757d; /* Bootstrap secondary grey */
-            color: white; /* White text color */
-        }
-
-        /* Hover effect for the blue button */
-        .blue-button:hover {
-            background-color: #0056b3; /* A darker shade of blue */
-        }
-
-        /* Hover effect for the green button */
-        .green-button:hover {
-            background-color: #218838; /* A darker shade of green */
-        }
-
-        /* Hover effect for the orange button */
-        .orange-button:hover {
-            background-color: #e0a800; /* A darker shade of orange */
-        }
-
-        /* Hover effect for the grey button */
-        .grey-button:hover {
-            background-color: #5a6268; /* A darker shade of grey */
-            padding: 5px 10px; /* Smaller padding for a smaller button */
-            font-size: 10px; /* Smaller font size for a smaller button */
-        }
-
-        .button-container {
-            display: flex; /* Use flexbox to layout children */
-            justify-content: center; /* Center children horizontally */
-            align-items: center; /* Center children vertically */
-            gap: 70px; /* Add space between buttons */
-        }
-        
         /* Style for the section steps */
         .section-break {
             border: 0;
@@ -215,18 +219,56 @@
             border: 2px dotted #000; /* Dotted border */
             margin-top: 20px; /* Add some space above the iframe */
         }
+
+        /* Base style for buttons */
+        .button {
+            padding: 10px 20px; /* Some padding inside the button */
+            margin: 20px 10px; /* Some margin outside the button */
+            border: none; /* Remove the default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            display: inline-block; /* Allows the button to be centered with text-align */
+            font-size: 16px; /* Increase font size */
+        }
+
+        /* Specific style for the blue button */
+        .blue-button {
+            background-color: #007bff; /* Bootstrap primary blue */
+            color: white; /* White text color */
+        }
+
+        /* Hover effect for the blue button */
+        .blue-button:hover {
+            background-color: #0056b3; /* A darker shade of blue */
+        }
+        
+        .button-container {
+            display: flex; /* Use flexbox to layout children */
+            justify-content: center; /* Center children horizontally */
+            align-items: center; /* Center children vertically */
+            gap: 70px; /* Add space between buttons */
+        }
+        
+        
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <!-- Replace 'logo1.png' with the path to your actual first logo -->
+        <img src="images/UW_logo.png" alt="University Logo" class="logo2">
+        <!-- Other content for the top bar goes here -->
+    </div>
+    <div class="nav-menu">
+        <!-- Replace 'path_to_logo_image.png' with the path to your actual logo image -->
+        <img src="images/CEI_logo.png" alt="Clean Energy Institute Logo" class="logo1">
+        <ul>
+            <!-- Add actual links to your navigation items -->
+            <li><a href="index.html" >Research Motivation</a></li>
+            <li><a href="network.html" class="active">Electric Bus Networks</a></li>
+            <li><a href="Q_A.html">Q & A</a></li>
+        </ul>
+    </div>
     <div class="flex-container">
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="index.html">Research Motivation</a></li>
-                <li><a href="network.html" class="active">Electric Bus Networks</a></li>
-                <li><a href="Q_A.html">Q & A</a></li>
-            </ul>
-        </div>
         <div class="main-content">
             <div class="introduction-container">
                 <h2>A Coupled Transportation and Power Network Visualization in the Browser</h2>
@@ -242,57 +284,108 @@
                 </p>
 
                 <h3 class="section-heading">📖 Existing Case Study</h3>
-                <p class="section-content">Explore the intricacies of coupled power and transportation networks in three exemplary cities - King County, WA, Austin, TX, and Salt Lake City, UT. 🌟 Get ready to zoom in and explore the big, busy world of power and transportation networks. You'll see every tiny detail - it's like being a detective for cities!</p>
-                <!-- Container for the buttons -->
-                <div class="button-container">
-                    <!-- Wrap buttons with anchor tags to make them clickable links -->
-                    <a href="images/coupled_map_sample_WA.html" target="map-frame">
-                      <button type="button" class="button blue-button">King County, WA.</button>
-                    </a>
-                    <a href="images/coupled_map_TX_sample.html" target="map-frame">
-                      <button type="button" class="button orange-button">Austin, TX.</button>
-                    </a>
-                    <a href="images/coupled_map_UT_sample.html" target="map-frame">
-                      <button type="button" class="button green-button">Salt Lake City, UT.</button>
-                    </a>
-                  </div>
+                <p class="section-content">Hey, young explorers! 🌟 Ready for an adventure? We're going to look at six awesome cities on this map, each marked with a 📍. Just click the button next to each city to explore their exciting electricity and bus systems. It's like being a city detective! You'll see all the little details that make these cities buzz and hum. </p>
+                <p>Remember, our map is just a sneak peek, showing some of the bus routes in these cities. Let's start our urban exploration journey and discover how these places stay powered and moving!</p>
+                <hr class="section-break">
+
+            <!-- use the tool image_map_generator: https://www.image-map.net/ -->
+                <div class="map-container">
+                    <img src="images/map.png" usemap="#citymap" alt="Map of the USA">
+                    <map name="citymap">
+                        <div class="map-marker" data-original-left="117" data-original-top="66">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_sample_WA.html">King County</button>
+                        </div>
+                        <div class="map-marker" data-original-left="550" data-original-top="595">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_TX_sample.html">Austin</button>
+                        </div>
+                        <div class="map-marker" data-original-left="267" data-original-top="292">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_UT_sample.html">Salt Lake City</button>
+                        </div>
+                        <div class="map-marker" data-original-left="745" data-original-top="280">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_IL_sample.html">Chicago</button>
+                        </div>
+                        <div class="map-marker" data-original-left="37" data-original-top="317">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_CA_sample.html">San Francisco</button>
+                        </div>
+                        <div class="map-marker" data-original-left="839" data-original-top="491">
+                            <span class="emoji">📍</span>
+                            <button class="city-btn" data-html="images/coupled_map_GA_sample.html">Atlanta</button>
+                        </div>
+                    </map>
+                </div>
+                
                 <!-- iframe to display the content -->
                 <iframe name="map-frame" class="iframe-container"></iframe> 
 
 
                 <h3 class="section-heading"> ✍️ Create Your Own Networks</h3>
-                <p class="section-content">You have the unique opportunity to create a custom network for your own city's electric bus planning. 🚌 It's simple and loads of fun! Just follow these easy steps:
-
+                <p class="section-content">Looking for something different because your city isn't on the list? Or maybe you want to add your own hometown 🏡 </p>
+                <p>If you know a bit about Python 🐍 and have it set up on your computer, you're in for a treat! You can create your very own custom electric bus network for your city. And guess what? It's not only simple, it's really enjoyable too! Let me show you how you can get started: 🚀</p>
                     <ol class="section-steps">
-                        <li>Download a General Transit Feed Specification (GTFS) data file for your city's buses (you can usually find this on Google).</li>
-                        <li>Drag and drop the zip file into the box below.</li>
-                        <li>Click on "Generate" and watch the magic happen!</li>
+                        <li><strong>Download the Magic Tool:</strong> Grab the python function <a href="https://github.com/Xinyi-0724/GTFS_TransPowerNet" target="_blank"><strong>GTFS_PowerTransNet</strong></a> and unzip the file on your computer.</li>
+                        <li><strong>Get Your City's Bus Data:</strong> Find a General Transit Feed Specification (GTFS) data file for your city's buses. Save this file in the 'source_code' subfolder of the python file you just unzipped.</li>
+                        <li><strong>Set Up Your Python Toolbox:</strong> Install the necessary python package in your python environment.</li>
+                        <li><strong>Open Your Code Notebook:</strong> Launch the jupyternotebook named 'coupled_net_example.ipynb' from the source code folder. Here's where the magic begins! Replace the GTFS file names with the one you downloaded for your city.</li>
+                        <li><strong>Tweak the Settings:</strong> Adjust settings like 'dist_threshold', 'common_stop_threshold', and 'threshold_power_node' in the jupyternotebook as needed.</li>
+                        <li><strong>Let the Code Run Wild:</strong> Run the code, and watch as it creates a fantastic coupled network, which you'll find saved in the 'source_code' folder.</li>
                     </ol>
                     
-                    That's all there is to it. Start now and see how you can transform your city's transportation network!</p>
+                    And there you have it! Start your coding adventure now and see how you can help transform the way your city moves around. Who knows, you might just be the next big city planner!</p>
 
-                    <hr class="section-break">
-                    <p>📂 Drag and drop your file into the box or click to select a file.</p>
-
-                    <div class="upload-container">
-                    <form action="/upload" method="post" enctype="multipart/form-data">
-                        <input type="file" name="file" id="file" accept=".zip" required>
-                        <button type="submit" class="button grey-button">Upload</button>
-
-                        
-                    </form>
-                    </div>
-                    <p>After you upload your file, click on the button below to generate your network 🌟.</p>
-                    <div class="center-container">
-                        <button type="submit" class="button green-button">Generate your network</button>
-                      </div>
-
-                     
+                    
                         
             </div>
         </div>
     </div>
-    <!-- Add your scripts here -->
+    <script>
+        function adjustMarkers() {
+            // Get the map container and the original dimensions of the map image
+            const mapContainer = document.querySelector('.map-container');
+            const originalWidth = 1200; // Replace with the original width of your map image
+            const originalHeight = 742; // Replace with the original height of your map image
+
+            // Calculate the current scale factor
+            const currentWidth = mapContainer.offsetWidth;
+            const scaleFactor = currentWidth / originalWidth;
+
+            // Adjust each marker
+            const markers = document.querySelectorAll('.map-marker');
+            markers.forEach(marker => {
+                const originalLeft = parseInt(marker.getAttribute('data-original-left'));
+                const originalTop = parseInt(marker.getAttribute('data-original-top'));
+
+                // Scale the position of the marker
+                marker.style.left = (originalLeft * scaleFactor) + 'px';
+                marker.style.top = (originalTop * scaleFactor) + 'px';
+            });
+        }
+
+        document.querySelectorAll('.city-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const htmlFile = this.getAttribute('data-html');
+                document.querySelector('.iframe-container').src = htmlFile;
+            });
+        });
+
+        // Adjust markers on window resize
+        window.addEventListener('resize', adjustMarkers);
+
+        // Initial adjustment
+        adjustMarkers();
+
+
+
+    // Don't forget to include the 'adjustMarkers' function and resize event listener from the previous solution.
+
+
+    </script>
+
+
 </body>
 </html>
                         
