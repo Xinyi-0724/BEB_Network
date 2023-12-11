@@ -1,7 +1,7 @@
 # Electric Bus Network Planning Tool
 
 Welcome to the Electric Bus Network Planning Tool, an interactive webpage designed to facilitate efficient planning and analysis of electric bus networks in urban areas.
-Just visit the website: http://plv.xinyi.com/
+Just visit the website: [http://plv.xinyi.com/](https://xinyizhao.xyz/BEB_Network/)
 
 ## Overview
 
