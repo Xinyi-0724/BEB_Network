@@ -9,7 +9,7 @@ This tool provides an intuitive interface for exploring coupled power and transp
 
 ## Features
 
-- **Interactive Maps**: Zoom in to view detailed power and transportation networks in six cities
+- **Interactive Maps**: Zoom in to view detailed power and transportation networks in six cities.
 - **Custom Network Generation**: Upload a GTFS data file from your city to create a tailored electric bus network plan.
 - **User-Friendly Interface**: Designed with simplicity and ease of use in mind, suitable for planners, researchers, and students alike.
 
